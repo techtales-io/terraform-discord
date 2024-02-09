@@ -1,0 +1,11 @@
+---
+version: "3"
+
+vars:
+  PROJECT_DIR:
+    sh: "git rev-parse --show-toplevel"
+  TERRAFORM_DIR: "{{.PROJECT_DIR}}"
+
+includes:
+  pre-commit: .taskfiles/pre-commit/Taskfile.yaml
+  lint: .taskfiles/lint/Taskfile.yaml
