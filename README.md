@@ -86,7 +86,6 @@ task pre-commit:init
 | `AWS_ACCESS_KEY_ID`     | username for the s3 state backend     |
 | `AWS_SECRET_ACCESS_KEY` | password for the s3 state backend     |
 
-AWS_S3_ENDPOINT
 
 ## Terraform docs
 
