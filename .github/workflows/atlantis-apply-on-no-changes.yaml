@@ -1,0 +1,43 @@
+---
+# We want to run automerge atlantis managed PRs if no change is detected in the infrastructure
+# this is required because atlantis does not support automerge on no changes.
+# This mostly happens when a PR is created by renovate (f.e. tyriis-automation[bot]).
+name: atlantis apply on no changes
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  atlantis-apply-on-no-changes:
+    if: >
+      !!github.event.issue.pull_request &&
+      github.event.comment.user.login == 'techtales-atlantis[bot]' &&
+      contains(github.event.comment.body, 'No changes. Your infrastructure matches the configuration.')
+    name: Atlantis apply on no changes
+    runs-on:
+      - ubuntu-latest
+    steps:
+      # https://github.com/marketplace/actions/github-app-token
+      - name: Generate Token
+        uses: tibdex/github-app-token@3beb63f4bd073e61482598c45c71c1019b59b73a # v2.1.0
+        id: generate-token
+        with:
+          app_id: "${{ secrets.BOT_APP_ID }}"
+          private_key: "${{ secrets.BOT_APP_PRIVATE_KEY }}"
+
+      # https://github.com/marketplace/actions/checkout
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          token: "${{ steps.generate-token.outputs.token }}"
+          fetch-depth: 0
+
+      # https://github.com/marketplace/actions/install-gh-cli
+      - name: install github cli
+        uses: dev-hanz-ops/install-gh-cli-action@006996394f415f03969b74e3296af42f34f6d8f5 # v0.1.0
+
+      - name: Comment on PR
+        run: gh pr comment ${{ github.event.issue.number }} --body "atlantis apply"
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
