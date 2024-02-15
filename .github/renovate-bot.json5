@@ -1,5 +1,6 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  platform: "github",
   username: "techtales-bot[bot]",
   gitAuthor: "techtales-bot <118013669+techtales-bot[bot]@users.noreply.github.com>",
   platformCommit: true,

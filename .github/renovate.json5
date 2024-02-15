@@ -1,6 +1,5 @@
 {
   enabled: true,
-  platform: "github",
   extends: [
     "github>tyriis/renovate-config//dashboard/default.json5",
     "github>tyriis/renovate-config//terraform-infra.json5",
@@ -11,8 +10,4 @@
   rebaseWhen: "conflicted",
   regexManagers: [],
   packageRules: [],
-  username: "techtales-bot[bot]",
-  gitAuthor: "techtales-bot <118013669+techtales-bot[bot]@users.noreply.github.com>",
-  platformCommit: true,
-  repositories: ["techtales-io/terraform-github"],
 }
