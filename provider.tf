@@ -1,7 +1,10 @@
-provider "discord" {
-  token = var.discord_token
+provider "vault" {
 }
 
-provider "vault" {
-  skip_child_token = true
+data "vault_generic_secret" "terraform_discord" {
+  path = "infra/techtales/terraform-discord"
+}
+
+provider "discord" {
+  token = data.vault_generic_secret.terraform_discord.data["discord_token"]
 }

@@ -79,13 +79,11 @@ task pre-commit:init
 
 | Name                    | Description                           |
 | ----------------------- | ------------------------------------- |
-| `TF_VAR_discord_token`  | discord token                         |
 | `VAULT_TOKEN`           | vault token                           |
 | `AWS_ENDPOINT_URL_S3`   | endpoint url for the s3 state backend |
 | `AWS_REGION`            | region for the s3 state backend       |
 | `AWS_ACCESS_KEY_ID`     | username for the s3 state backend     |
 | `AWS_SECRET_ACCESS_KEY` | password for the s3 state backend     |
-
 
 ## Terraform docs
 
@@ -152,12 +150,11 @@ No modules.
 | [discord_local_image.flux](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/data-sources/local_image) | data source |
 | [discord_local_image.promehtheus](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/data-sources/local_image) | data source |
 | [discord_server.techtales](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/data-sources/server) | data source |
+| [vault_generic_secret.terraform_discord](https://registry.terraform.io/providers/hashicorp/vault/3.25.0/docs/data-sources/generic_secret) | data source |
 
 ### Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_discord_token"></a> [discord\_token](#input\_discord\_token) | The discord API token | `string` | n/a | yes |
+No inputs.
 
 ### Outputs
 
