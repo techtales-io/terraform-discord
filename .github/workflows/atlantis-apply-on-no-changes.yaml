@@ -35,7 +35,7 @@ jobs:
 
       # https://github.com/marketplace/actions/install-gh-cli
       - name: install github cli
-        uses: dev-hanz-ops/install-gh-cli-action@006996394f415f03969b74e3296af42f34f6d8f5 # v0.1.0
+        uses: dev-hanz-ops/install-gh-cli-action@8fff9050dae2d81b38f94500d8b74ad1d1d47410 # v0.2.0
 
       - name: Comment on PR
         run: gh pr comment ${{ github.event.issue.number }} --body "atlantis apply"
