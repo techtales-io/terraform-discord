@@ -310,7 +310,7 @@ resource "discord_voice_channel" "minecraft" {
 # }
 
 data "discord_local_image" "promehtheus" {
-  file = "assets/prometheus.png"
+  file = "./assets/prometheus.png"
 }
 
 resource "discord_webhook" "talos_flux_prometheus_alertmanager" {
@@ -324,7 +324,7 @@ resource "discord_webhook" "talos_flux_prometheus_alertmanager" {
 # }
 
 data "discord_local_image" "flux" {
-  file = "assets/flux.png"
+  file = "./assets/flux.png"
 }
 
 resource "discord_webhook" "talos_flux_flux_system" {
@@ -338,7 +338,7 @@ resource "discord_webhook" "talos_flux_flux_system" {
 # }
 
 data "discord_local_image" "botkube" {
-  file = "assets/botkube-dalle3.png"
+  file = "./assets/botkube-dalle3.png"
 }
 
 resource "discord_webhook" "talos_flux_botkube" {
