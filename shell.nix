@@ -8,5 +8,6 @@ in
       pkgs.terraform
       pkgs.terraform-docs
       pkgs.tflint
+      pkgs.direnv
     ];
   }

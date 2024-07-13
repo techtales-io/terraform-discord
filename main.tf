@@ -358,6 +358,7 @@ resource "vault_kv_secret_v2" "terraform_discord" {
   cas                 = 1
   delete_all_versions = true
   data_json = jsonencode({
+    discord_token                  = data.vault_generic_secret.terraform_discord.data["discord_token"]
     talos_flux_botkube_webhook     = discord_webhook.talos_flux_botkube.url
     talos_flux_prometheus_webhook  = discord_webhook.talos_flux_prometheus_alertmanager.url
     talos_flux_flux_system_webhook = discord_webhook.talos_flux_flux_system.url
