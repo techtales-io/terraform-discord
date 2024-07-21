@@ -338,14 +338,14 @@ resource "discord_webhook" "talos_flux_flux_system" {
 #   value = nonsensitive(discord_webhook.talos_flux_flux_system.url)
 # }
 
-data "discord_local_image" "botkube" {
-  file = "${path.module}/assets/botkube-dalle3.png"
-}
+# data "discord_local_image" "botkube" {
+#   file = "${path.module}/assets/botkube-dalle3.png"
+# }
 
 resource "discord_webhook" "talos_flux_botkube" {
   channel_id      = resource.discord_text_channel.talos_flux_botkube.id
   name            = "talos-flux - Botkube"
-  avatar_data_uri = data.discord_local_image.botkube.data_uri
+  # avatar_data_uri = data.discord_local_image.botkube.data_uri
 }
 
 # output "talos_flux_botkube_url" {
