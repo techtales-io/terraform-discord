@@ -309,51 +309,43 @@ resource "discord_voice_channel" "minecraft" {
 #     position = 1
 # }
 
-# data "discord_local_image" "promehtheus" {
-#   file = "${path.module}/assets/prometheus.png"
-# }
-
-locals {
-  promehtheus_avatar_base64 = filebase64("${path.module}/assets/prometheus.png")
-  flux_avatar_base64        = filebase64("${path.module}/assets/flux.png")
-  botkube_avatar_base64     = filebase64("${path.module}/assets/botkube-dalle3.png")
+data "discord_local_image" "promehtheus" {
+  file = "${path.module}/assets/prometheus.png"
 }
+
 
 resource "discord_webhook" "talos_flux_prometheus_alertmanager" {
   channel_id      = resource.discord_text_channel.talos_flux_prometheus_alertmanager.id
   name            = "talos-flux - Prometheus Alertmanager"
-  avatar_data_uri = "data:image/png;base64,${local.promehtheus_avatar_base64}"
-  # avatar_data_uri = data.discord_local_image.promehtheus.data_uri
+  avatar_data_uri = data.discord_local_image.promehtheus.data_uri
 }
 
 # output "talos_flux_prometheus_alertmanager_url" {
 #   value = nonsensitive(discord_webhook.talos_flux_prometheus_alertmanager.url)
 # }
 
-# data "discord_local_image" "flux" {
-#   file = "${path.module}/assets/flux.png"
-# }
+data "discord_local_image" "flux" {
+  file = "${path.module}/assets/flux.png"
+}
 
 resource "discord_webhook" "talos_flux_flux_system" {
   channel_id      = resource.discord_text_channel.talos_flux_flux_system.id
   name            = "talos-flux - Flux Reconciler"
-  avatar_data_uri = "data:image/png;base64,${local.flux_avatar_base64}"
-  # avatar_data_uri = data.discord_local_image.flux.data_uri
+  avatar_data_uri = data.discord_local_image.flux.data_uri
 }
 
 # output "talos_flux_flux_system_url" {
 #   value = nonsensitive(discord_webhook.talos_flux_flux_system.url)
 # }
 
-# data "discord_local_image" "botkube" {
-#   file = "${path.module}/assets/botkube-dalle3.png"
-# }
+data "discord_local_image" "botkube" {
+  file = "${path.module}/assets/botkube-dalle3.png"
+}
 
 resource "discord_webhook" "talos_flux_botkube" {
   channel_id      = resource.discord_text_channel.talos_flux_botkube.id
   name            = "talos-flux - Botkube"
-  avatar_data_uri = "data:image/png;base64,${local.botkube_avatar_base64}"
-  # avatar_data_uri = data.discord_local_image.botkube.data_uri
+  avatar_data_uri = data.discord_local_image.botkube.data_uri
 }
 
 # output "talos_flux_botkube_url" {
