@@ -6,6 +6,8 @@ default_stages:
   - commit
   - push
 
+exclude: "^assets/"
+
 repos:
   - repo: https://github.com/thlorenz/doctoc
     rev: v2.2.0
