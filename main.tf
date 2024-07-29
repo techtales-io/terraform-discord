@@ -104,10 +104,10 @@ resource "discord_text_channel" "holidays" {
 }
 
 resource "discord_text_channel" "reviews" {
-  name                     = "・reviews"
+  name                     = "reviews"
   position                 = 10
   sync_perms_with_category = false
-  topic                    = "github reviews"
+  topic                    = "reviews"
   server_id                = data.discord_server.techtales.id
   category                 = resource.discord_category_channel.general.id
 }
