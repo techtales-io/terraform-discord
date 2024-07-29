@@ -301,7 +301,7 @@ resource "discord_voice_channel" "minecraft" {
 # }
 
 data "discord_local_image" "prometheus" {
-  file = "assets/prometheus.png"
+  file = "${path.module}/assets/prometheus.png"
 }
 
 
