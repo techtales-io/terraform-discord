@@ -94,11 +94,6 @@ resource "discord_text_channel" "food" {
   category                 = resource.discord_category_channel.general.id
 }
 
-moved {
-    from = discord_text_channel.holiday2023
-    to = discord_text_channel.holidays
-}
-
 resource "discord_text_channel" "holidays" {
   name                     = "🏖・holidays"
   position                 = 9
@@ -111,7 +106,7 @@ resource "discord_text_channel" "holidays" {
 resource "discord_text_channel" "reviews" {
   name                     = "reviews"
   position                 = 10
-  sync_perms_with_category = false
+  sync_perms_with_category = true
   topic                    = "reviews"
   server_id                = data.discord_server.techtales.id
   category                 = resource.discord_category_channel.general.id
