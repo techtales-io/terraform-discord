@@ -3,11 +3,12 @@ let
 in
   pkgs.mkShell {
     packages = [
+      pkgs.direnv
       pkgs.go-task
       pkgs.pre-commit
       pkgs.terraform
       pkgs.terraform-docs
       pkgs.tflint
-      pkgs.direnv
+      pkgs.trivy
     ];
   }

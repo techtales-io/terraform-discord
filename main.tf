@@ -58,15 +58,6 @@ resource "discord_text_channel" "crowlex" {
   category                 = resource.discord_category_channel.general.id
 }
 
-resource "discord_text_channel" "bettgefluester" {
-  name                     = "🛏・bettgeflüster"
-  position                 = 4
-  sync_perms_with_category = false
-  topic                    = "love is in the air"
-  server_id                = data.discord_server.techtales.id
-  category                 = resource.discord_category_channel.general.id
-}
-
 resource "discord_text_channel" "links" {
   name                     = "🔗・links"
   position                 = 5
@@ -103,20 +94,25 @@ resource "discord_text_channel" "food" {
   category                 = resource.discord_category_channel.general.id
 }
 
-resource "discord_text_channel" "holiday2023" {
-  name                     = "🏖・holiday2023"
+moved {
+    from = discord_text_channel.holiday2023
+    to = discord_text_channel.holidays
+}
+
+resource "discord_text_channel" "holidays" {
+  name                     = "🏖・holidays"
   position                 = 9
   sync_perms_with_category = false
-  topic                    = "holiday 2023"
+  topic                    = "holiday planning"
   server_id                = data.discord_server.techtales.id
   category                 = resource.discord_category_channel.general.id
 }
 
-resource "discord_text_channel" "jobs" {
-  name                     = "💼・jobs"
+resource "discord_text_channel" "reviews" {
+  name                     = "reviews"
   position                 = 10
   sync_perms_with_category = false
-  topic                    = "job opportunities"
+  topic                    = "reviews"
   server_id                = data.discord_server.techtales.id
   category                 = resource.discord_category_channel.general.id
 }
@@ -259,8 +255,8 @@ resource "discord_voice_channel" "afk" {
   sync_perms_with_category = true
 }
 
-resource "discord_voice_channel" "fortnite" {
-  name                     = "🎮・fortnite"
+resource "discord_voice_channel" "gaming" {
+  name                     = "🎮・gaming"
   server_id                = data.discord_server.techtales.id
   position                 = 2
   category                 = resource.discord_category_channel.voice.id
@@ -309,7 +305,7 @@ resource "discord_voice_channel" "minecraft" {
 #     position = 1
 # }
 
-data "discord_local_image" "promehtheus" {
+data "discord_local_image" "prometheus" {
   file = "${path.module}/assets/prometheus.png"
 }
 
@@ -317,7 +313,7 @@ data "discord_local_image" "promehtheus" {
 resource "discord_webhook" "talos_flux_prometheus_alertmanager" {
   channel_id      = resource.discord_text_channel.talos_flux_prometheus_alertmanager.id
   name            = "talos-flux - Prometheus Alertmanager"
-  avatar_data_uri = data.discord_local_image.promehtheus.data_uri
+  avatar_data_uri = data.discord_local_image.prometheus.data_uri
 }
 
 # output "talos_flux_prometheus_alertmanager_url" {
@@ -343,8 +339,8 @@ resource "discord_webhook" "talos_flux_flux_system" {
 # }
 
 resource "discord_webhook" "talos_flux_botkube" {
-  channel_id      = resource.discord_text_channel.talos_flux_botkube.id
-  name            = "talos-flux - Botkube"
+  channel_id = resource.discord_text_channel.talos_flux_botkube.id
+  name       = "talos-flux - Botkube"
   # avatar_data_uri = data.discord_local_image.botkube.data_uri
 }
 

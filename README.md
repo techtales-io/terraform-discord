@@ -94,15 +94,15 @@ task pre-commit:init
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.0 |
-| <a name="requirement_discord"></a> [discord](#requirement\_discord) | 1.6.1 |
-| <a name="requirement_vault"></a> [vault](#requirement\_vault) | 3.25.0 |
+| <a name="requirement_discord"></a> [discord](#requirement\_discord) | 1.8.1 |
+| <a name="requirement_vault"></a> [vault](#requirement\_vault) | 4.3.0 |
 
 ### Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_discord"></a> [discord](#provider\_discord) | 1.6.1 |
-| <a name="provider_vault"></a> [vault](#provider\_vault) | 3.25.0 |
+| <a name="provider_discord"></a> [discord](#provider\_discord) | 1.8.1 |
+| <a name="provider_vault"></a> [vault](#provider\_vault) | 4.3.0 |
 
 ### Modules
 
@@ -112,45 +112,43 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [discord_category_channel.family](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/category_channel) | resource |
-| [discord_category_channel.general](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/category_channel) | resource |
-| [discord_category_channel.home_automation](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/category_channel) | resource |
-| [discord_category_channel.home_ops_talos_flux](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/category_channel) | resource |
-| [discord_category_channel.voice](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/category_channel) | resource |
-| [discord_server.techtales](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/server) | resource |
-| [discord_text_channel.bettgefluester](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.chat](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.configs](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.crowlex](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.floor_heating](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.food](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.gametime](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.holiday2023](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.home_automation](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.info](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.jobs](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.links](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.nas](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.service_incidents](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.talos_flux_botkube](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.talos_flux_flux_system](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.talos_flux_prometheus_alertmanager](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.techinik](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.todos](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.window_venting](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/text_channel) | resource |
-| [discord_voice_channel.afk](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/voice_channel) | resource |
-| [discord_voice_channel.fortnite](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/voice_channel) | resource |
-| [discord_voice_channel.minecraft](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/voice_channel) | resource |
-| [discord_voice_channel.stream](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/voice_channel) | resource |
-| [discord_webhook.talos_flux_botkube](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/webhook) | resource |
-| [discord_webhook.talos_flux_flux_system](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/webhook) | resource |
-| [discord_webhook.talos_flux_prometheus_alertmanager](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/resources/webhook) | resource |
-| [vault_kv_secret_v2.terraform_discord](https://registry.terraform.io/providers/hashicorp/vault/3.25.0/docs/resources/kv_secret_v2) | resource |
-| [discord_local_image.botkube](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/data-sources/local_image) | data source |
-| [discord_local_image.flux](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/data-sources/local_image) | data source |
-| [discord_local_image.promehtheus](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/data-sources/local_image) | data source |
-| [discord_server.techtales](https://registry.terraform.io/providers/Lucky3028/discord/1.6.1/docs/data-sources/server) | data source |
-| [vault_generic_secret.terraform_discord](https://registry.terraform.io/providers/hashicorp/vault/3.25.0/docs/data-sources/generic_secret) | data source |
+| [discord_category_channel.family](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/category_channel) | resource |
+| [discord_category_channel.general](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/category_channel) | resource |
+| [discord_category_channel.home_automation](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/category_channel) | resource |
+| [discord_category_channel.home_ops_talos_flux](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/category_channel) | resource |
+| [discord_category_channel.voice](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/category_channel) | resource |
+| [discord_server.techtales](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/server) | resource |
+| [discord_text_channel.chat](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_text_channel.configs](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_text_channel.crowlex](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_text_channel.floor_heating](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_text_channel.food](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_text_channel.gametime](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_text_channel.holidays](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_text_channel.home_automation](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_text_channel.info](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_text_channel.links](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_text_channel.nas](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_text_channel.reviews](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_text_channel.service_incidents](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_text_channel.talos_flux_botkube](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_text_channel.talos_flux_flux_system](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_text_channel.talos_flux_prometheus_alertmanager](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_text_channel.techinik](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_text_channel.todos](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_text_channel.window_venting](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
+| [discord_voice_channel.afk](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/voice_channel) | resource |
+| [discord_voice_channel.gaming](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/voice_channel) | resource |
+| [discord_voice_channel.minecraft](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/voice_channel) | resource |
+| [discord_voice_channel.stream](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/voice_channel) | resource |
+| [discord_webhook.talos_flux_botkube](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/webhook) | resource |
+| [discord_webhook.talos_flux_flux_system](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/webhook) | resource |
+| [discord_webhook.talos_flux_prometheus_alertmanager](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/webhook) | resource |
+| [vault_kv_secret_v2.terraform_discord](https://registry.terraform.io/providers/hashicorp/vault/4.3.0/docs/resources/kv_secret_v2) | resource |
+| [discord_local_image.flux](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/data-sources/local_image) | data source |
+| [discord_local_image.prometheus](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/data-sources/local_image) | data source |
+| [discord_server.techtales](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/data-sources/server) | data source |
+| [vault_generic_secret.terraform_discord](https://registry.terraform.io/providers/hashicorp/vault/4.3.0/docs/data-sources/generic_secret) | data source |
 
 ### Inputs
 
