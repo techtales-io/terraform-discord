@@ -1,0 +1,10 @@
+[settings]
+experimental = true
+
+[tools]
+direnv = "2.34.0"
+pre-commit = "3.8.0"
+terraform = "1.9.4"
+terraform-docs = "0.18.0"
+tflint =  "0.53.0"
+trivy = "0.54.1"
