@@ -16,19 +16,4 @@ terraform {
       version = "4.4.0"
     }
   }
-  backend "s3" {
-    bucket                      = "terraform"
-    key                         = "techtales/discord/terraform.tfstate"
-    skip_credentials_validation = true
-    skip_metadata_api_check     = true
-    skip_region_validation      = true
-    skip_requesting_account_id  = true
-    skip_s3_checksum            = true
-    use_path_style              = true
-  }
-}
-
-module "techtales" {
-  source        = "./techtales"
-  discord_token = data.vault_generic_secret.terraform_discord.data["discord_token"]
 }
