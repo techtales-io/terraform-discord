@@ -8,7 +8,7 @@ terraform {
     discord = {
       # https://registry.terraform.io/providers/Lucky3028/discord/latest/docs
       source  = "Lucky3028/discord"
-      version = "1.8.1"
+      version = "1.9.0"
     }
     vault = {
       source  = "hashicorp/vault"
