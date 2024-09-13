@@ -1,0 +1,10 @@
+---
+apiVersion: terraform.techtales.io/v1alpha1
+kind: DiscordWebhook
+metadata:
+  name: prometheus-alertmanager
+  namespace: techtales.io
+spec:
+  displayName: talos-flux - Prometheus Alertmanager
+  channel: alerts
+  avatar: assets/prometheus.png

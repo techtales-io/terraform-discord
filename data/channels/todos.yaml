@@ -1,0 +1,10 @@
+---
+apiVersion: terraform.techtales.io/v1alpha1
+kind: DiscordTextChannel
+metadata:
+  name: todos
+  namespace: techtales.io
+spec:
+  displayName: 📋・todos
+  topic: one day…
+  syncPermissionsWithCategory: false

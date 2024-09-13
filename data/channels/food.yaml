@@ -1,0 +1,9 @@
+---
+apiVersion: terraform.techtales.io/v1alpha1
+kind: DiscordTextChannel
+metadata:
+  name: food
+  namespace: techtales.io
+spec:
+  displayName: 🍲・food
+  topic: mjam mjam mjam.at

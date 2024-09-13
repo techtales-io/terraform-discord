@@ -1,0 +1,18 @@
+---
+apiVersion: terraform.techtales.io/v1alpha1
+kind: DiscordServer
+metadata:
+  name: techtales.io
+  namespace: techtales.io
+spec:
+  region: rotterdam
+  afkChannelId: "1028684203711271043"
+  afkTimeout: 900
+  defaultMessageNotifications: 1
+  verificationLevel: 3
+  categories:
+    - general
+    - family
+    - voice-channels
+    - home-ops
+    - home-automation

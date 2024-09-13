@@ -1,0 +1,13 @@
+---
+apiVersion: terraform.techtales.io/v1alpha1
+kind: DiscordCategoryChannel
+metadata:
+  name: voice-channels
+  namespace: techtales.io
+spec:
+  displayName: 🔊・VOICE CHANNELS
+  channels:
+    - stream
+    - afk
+    - gaming
+    - minecraft

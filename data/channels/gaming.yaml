@@ -1,0 +1,8 @@
+---
+apiVersion: terraform.techtales.io/v1alpha1
+kind: DiscordVoiceChannel
+metadata:
+  name: gaming
+  namespace: techtales.io
+spec:
+  displayName: 🎮・gaming

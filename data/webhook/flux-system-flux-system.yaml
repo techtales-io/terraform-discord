@@ -1,0 +1,10 @@
+---
+apiVersion: terraform.techtales.io/v1alpha1
+kind: DiscordWebhook
+metadata:
+  name: flux-system
+  namespace: techtales.io
+spec:
+  displayName: talos-flux - Flux Reconciler
+  channel: flux-system
+  avatar: assets/flux.png
