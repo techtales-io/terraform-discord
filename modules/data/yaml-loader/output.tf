@@ -1,8 +1,8 @@
 output "data" {
   value = {
-    servers = local.servers
+    servers    = local.servers
     categories = local.categories
-    channels = local.channels
-    webhooks = local.webhooks
+    channels   = local.channels
+    webhooks   = local.webhooks
   }
 }

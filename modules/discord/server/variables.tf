@@ -2,7 +2,7 @@ variable "config" {
   type = object({
     apiVersion = string
     kind       = string
-    metadata   = object({
+    metadata = object({
       name      = string
       namespace = optional(string)
     })

@@ -2,18 +2,18 @@ variable "config" {
   type = object({
     apiVersion = string
     kind       = string
-    metadata   = object({
+    metadata = object({
       name      = string
       namespace = optional(string)
     })
     spec = object({
       displayName = optional(string)
-      channels = list(string)
+      channels    = list(string)
     })
   })
 
   validation {
-    condition = var.config.apiVersion == "terraform.techtales.io/v1alpha1"
+    condition     = var.config.apiVersion == "terraform.techtales.io/v1alpha1"
     error_message = "The api must be `terraform.techtales.io` in version `v1alpha1`."
   }
 
@@ -33,7 +33,7 @@ variable "config" {
   }
 
   validation {
-    condition = length(var.config.spec.channels) > 0
+    condition     = length(var.config.spec.channels) > 0
     error_message = "The `channels` list in the spec must contain ar least one channel."
   }
 }
