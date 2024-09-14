@@ -6,4 +6,3 @@ metadata:
   namespace: techtales.io
 spec:
   displayName: 💬・chat
-  syncsyncPermissionsWithCategory: false

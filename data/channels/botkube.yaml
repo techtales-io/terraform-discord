@@ -7,4 +7,3 @@ metadata:
 spec:
   displayName: 🤖・botkube
   topic: monitor + act on your K8s cluster
-  syncsyncPermissionsWithCategory: false

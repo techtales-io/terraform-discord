@@ -7,4 +7,3 @@ metadata:
 spec:
   displayName: 🚨・alerts
   topic: from Prometheus Alertmanager
-  syncsyncPermissionsWithCategory: false
