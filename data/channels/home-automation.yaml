@@ -1,0 +1,10 @@
+---
+apiVersion: terraform.techtales.io/v1alpha1
+kind: DiscordTextChannel
+metadata:
+  name: home-automation
+  namespace: techtales.io
+spec:
+  displayName: 🧙・home-automation
+  topic: beep beep beep
+  syncPermissionsWithCategory: false

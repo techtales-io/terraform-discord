@@ -11,10 +11,10 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![nix][nix-shield]][nix-url]
 [![pre-commit][pre-commit-shield]][pre-commit-url]
 [![taskfile][taskfile-shield]][taskfile-url]
 [![terraform][terraform-shield]][terraform-url]
+[![statefile][statefile-shield]](README.md)
 
 # Terraform Discord for techtales.io
 
@@ -30,14 +30,15 @@ Discord Server Infrastructure as code with Terraform.
 - [Getting Started](#getting-started)
   - [Prerequisties](#prerequisties)
   - [Initialize repository](#initialize-repository)
-- [ENV](#env)
-- [Terraform docs](#terraform-docs)
-  - [Requirements](#requirements)
-  - [Providers](#providers)
-  - [Modules](#modules)
-  - [Resources](#resources)
-  - [Inputs](#inputs)
-  - [Outputs](#outputs)
+- [Configuration](#configuration)
+  - [env](#env)
+- [CRD like data structure](#crd-like-data-structure)
+  - [Easy Collaboration](#easy-collaboration)
+  - [Versioning and Change Management](#versioning-and-change-management)
+  - [Data and Logic Separation](#data-and-logic-separation)
+  - [Flexibility in Spec Changes](#flexibility-in-spec-changes)
+  - [Standardization and Consistency](#standardization-and-consistency)
+  - [Improved Maintainability](#improved-maintainability)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 </details>
@@ -64,7 +65,6 @@ Pattern: `[a-z_-]+`
 - [terraform][terraform-url]
 - [terraform-docs][terraform-docs]
 - [tflint][tflint]
-- [tfsec][tfsec]
 
 ### Initialize repository
 
@@ -75,7 +75,9 @@ task terraform:init
 task pre-commit:init
 ```
 
-## ENV
+## Configuration
+
+### env
 
 | Name                    | Description                           |
 | ----------------------- | ------------------------------------- |
@@ -85,80 +87,39 @@ task pre-commit:init
 | `AWS_ACCESS_KEY_ID`     | username for the s3 state backend     |
 | `AWS_SECRET_ACCESS_KEY` | password for the s3 state backend     |
 
-## Terraform docs
+## CRD like data structure
 
-<!-- prettier-ignore-start -->
-<!-- BEGIN_TF_DOCS -->
-### Requirements
+By leveraging YAML-like CRDs as Terraform inputs, we can create a more flexible, maintainable, and collaborative infrastructure-as-code ecosystem that can easily adapt to changing requirements and team dynamics.
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.0 |
-| <a name="requirement_discord"></a> [discord](#requirement\_discord) | 1.8.1 |
-| <a name="requirement_vault"></a> [vault](#requirement\_vault) | 4.3.0 |
+### Easy Collaboration
 
-### Providers
+- **Human-readable format**: YAML is easy to read and write, making it accessible for team members with varying technical expertise.
+- **Version control friendly**: YAML files are text-based, allowing for easy tracking of changes in version control systems like Git.
 
-| Name | Version |
-|------|---------|
-| <a name="provider_discord"></a> [discord](#provider\_discord) | 1.8.1 |
-| <a name="provider_vault"></a> [vault](#provider\_vault) | 4.3.0 |
+### Versioning and Change Management
 
-### Modules
+- **Clear versioning**: The apiVersion field allows for easy tracking of schema changes over time.
+- **Structured updates**: Changes to resources can be clearly documented and reviewed in pull requests.
 
-No modules.
+### Data and Logic Separation
 
-### Resources
+- **Clean separation**: YAML files contain only data, while Terraform handles the logic, promoting a clear separation of concerns.
+- **Reduced complexity**: Simplifies maintenance by keeping configuration data separate from infrastructure-as-code logic.
 
-| Name | Type |
-|------|------|
-| [discord_category_channel.family](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/category_channel) | resource |
-| [discord_category_channel.general](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/category_channel) | resource |
-| [discord_category_channel.home_automation](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/category_channel) | resource |
-| [discord_category_channel.home_ops_talos_flux](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/category_channel) | resource |
-| [discord_category_channel.voice](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/category_channel) | resource |
-| [discord_server.techtales](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/server) | resource |
-| [discord_text_channel.chat](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.configs](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.crowlex](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.floor_heating](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.food](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.gametime](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.holidays](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.home_automation](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.info](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.links](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.nas](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.reviews](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.service_incidents](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.talos_flux_botkube](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.talos_flux_flux_system](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.talos_flux_prometheus_alertmanager](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.techinik](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.todos](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_text_channel.window_venting](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/text_channel) | resource |
-| [discord_voice_channel.afk](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/voice_channel) | resource |
-| [discord_voice_channel.gaming](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/voice_channel) | resource |
-| [discord_voice_channel.minecraft](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/voice_channel) | resource |
-| [discord_voice_channel.stream](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/voice_channel) | resource |
-| [discord_webhook.talos_flux_botkube](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/webhook) | resource |
-| [discord_webhook.talos_flux_flux_system](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/webhook) | resource |
-| [discord_webhook.talos_flux_prometheus_alertmanager](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/resources/webhook) | resource |
-| [vault_kv_secret_v2.terraform_discord](https://registry.terraform.io/providers/hashicorp/vault/4.3.0/docs/resources/kv_secret_v2) | resource |
-| [discord_local_image.flux](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/data-sources/local_image) | data source |
-| [discord_local_image.prometheus](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/data-sources/local_image) | data source |
-| [discord_server.techtales](https://registry.terraform.io/providers/Lucky3028/discord/1.8.1/docs/data-sources/server) | data source |
-| [vault_generic_secret.terraform_discord](https://registry.terraform.io/providers/hashicorp/vault/4.3.0/docs/data-sources/generic_secret) | data source |
+### Flexibility in Spec Changes
 
-### Inputs
+- **Extensible structure**: The spec section can be easily extended to accommodate new fields or configurations without breaking existing setups.
+- **Backward compatibility**: New versions can be introduced while maintaining support for older versions.
 
-No inputs.
+### Standardization and Consistency
 
-### Outputs
+- **Uniform structure**: Consistent format across different resource types improves readability and reduces errors.
+- **Metadata support**: The metadata section provides a standardized way to include additional information about resources.
 
-No outputs.
-<!-- END_TF_DOCS -->
-<!-- prettier-ignore-end -->
+### Improved Maintainability
+
+- **Modular approach**: Each resource is defined in its own YAML block, making it easier to manage and update individual components.
+- **Reusability**: YAML blocks can be easily copied, shared, or templated for use across different projects or environments.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -168,7 +129,6 @@ No outputs.
 [terraform-best-practices]: https://www.terraform-best-practices.com/naming
 [terraform-docs]: https://github.com/terraform-docs/terraform-docs
 [tflint]: https://github.com/terraform-linters/tflint
-[tfsec]: https://aquasecurity.github.io/tfsec
 
 <!-- Badges -->
 
@@ -178,5 +138,4 @@ No outputs.
 [pre-commit-url]: https://github.com/pre-commit/pre-commit
 [taskfile-shield]: https://img.shields.io/badge/taskfile-enabled-brightgreen?logo=task
 [taskfile-url]: https://taskfile.dev/
-[nix-shield]: https://img.shields.io/badge/nix-enabled-brightgreen?logo=nixos
-[nix-url]: https://search.nixos.org/packages
+[statefile-shield]: https://img.shields.io/badge/minio-tfstate-F8991D.svg?logo=amazons3

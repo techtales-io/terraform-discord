@@ -1,0 +1,10 @@
+---
+apiVersion: terraform.techtales.io/v1alpha1
+kind: DiscordWebhook
+metadata:
+  name: botkube
+  namespace: techtales.io
+spec:
+  displayName: talos-flux - Botkube
+  channel: botkube
+  # avatar: assets/botkube-dalle3.png
