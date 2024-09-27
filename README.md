@@ -11,7 +11,6 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![nix][nix-shield]][nix-url]
 [![pre-commit][pre-commit-shield]][pre-commit-url]
 [![taskfile][taskfile-shield]][taskfile-url]
 [![terraform][terraform-shield]][terraform-url]
@@ -64,7 +63,7 @@ Pattern: `[a-z_-]+`
 - [terraform][terraform-url]
 - [terraform-docs][terraform-docs]
 - [tflint][tflint]
-- [tfsec][tfsec]
+- [trivy][trivy]
 
 ### Initialize repository
 
@@ -168,7 +167,7 @@ No outputs.
 [terraform-best-practices]: https://www.terraform-best-practices.com/naming
 [terraform-docs]: https://github.com/terraform-docs/terraform-docs
 [tflint]: https://github.com/terraform-linters/tflint
-[tfsec]: https://aquasecurity.github.io/tfsec
+[trivy]: https://aquasecurity.github.io/trivy
 
 <!-- Badges -->
 
@@ -178,5 +177,3 @@ No outputs.
 [pre-commit-url]: https://github.com/pre-commit/pre-commit
 [taskfile-shield]: https://img.shields.io/badge/taskfile-enabled-brightgreen?logo=task
 [taskfile-url]: https://taskfile.dev/
-[nix-shield]: https://img.shields.io/badge/nix-enabled-brightgreen?logo=nixos
-[nix-url]: https://search.nixos.org/packages
