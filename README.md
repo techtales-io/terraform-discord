@@ -65,6 +65,7 @@ Pattern: `[a-z_-]+`
 - [terraform][terraform-url]
 - [terraform-docs][terraform-docs]
 - [tflint][tflint]
+- [trivy][trivy]
 
 ### Initialize repository
 
@@ -129,6 +130,7 @@ By leveraging YAML-like CRDs as Terraform inputs, we can create a more flexible,
 [terraform-best-practices]: https://www.terraform-best-practices.com/naming
 [terraform-docs]: https://github.com/terraform-docs/terraform-docs
 [tflint]: https://github.com/terraform-linters/tflint
+[trivy]: https://aquasecurity.github.io/trivy
 
 <!-- Badges -->
 
