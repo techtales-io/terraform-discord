@@ -1,4 +1,5 @@
 provider "vault" {
+  # ATLANTIS_INJECT_VAULT_CONFIG
 }
 
 data "vault_generic_secret" "terraform_discord" {
