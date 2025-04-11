@@ -5,6 +5,6 @@ metadata:
   name: info
   namespace: techtales.io
 spec:
-  displayName: 🛎️・info
+  displayName: 🛎・info
   topic: share all kind of informations with the family
   syncPermissionsWithCategory: false
