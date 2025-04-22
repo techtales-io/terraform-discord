@@ -24,7 +24,6 @@
 !README.md
 !Taskfile.yaml
 
-
 # ignore unnecessary files inside allowed directories
 # this should go after the allowed directories
 **/*.log
