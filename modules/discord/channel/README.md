@@ -12,13 +12,13 @@
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.0 |
-| <a name="requirement_discord"></a> [discord](#requirement\_discord) | 1.9.0 |
+| <a name="requirement_discord"></a> [discord](#requirement\_discord) | 2.0.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_discord"></a> [discord](#provider\_discord) | 1.9.0 |
+| <a name="provider_discord"></a> [discord](#provider\_discord) | 2.0.0 |
 
 ## Modules
 
@@ -28,8 +28,8 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [discord_text_channel.main](https://registry.terraform.io/providers/Lucky3028/discord/1.9.0/docs/resources/text_channel) | resource |
-| [discord_voice_channel.main](https://registry.terraform.io/providers/Lucky3028/discord/1.9.0/docs/resources/voice_channel) | resource |
+| [discord_text_channel.main](https://registry.terraform.io/providers/Lucky3028/discord/2.0.0/docs/resources/text_channel) | resource |
+| [discord_voice_channel.main](https://registry.terraform.io/providers/Lucky3028/discord/2.0.0/docs/resources/voice_channel) | resource |
 
 ## Inputs
 
