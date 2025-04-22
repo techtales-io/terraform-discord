@@ -2,12 +2,18 @@
 *
 
 # allow files and directories
-!/.github
-!/.taskfiles
-!/assets
-!/data
-!/modules
-!/terraform
+!.github
+!.github/**
+!.taskfiles
+!.taskfiles/**
+!assets
+!assets/**
+!data
+!data/**
+!modules
+!modules/**
+!terraform
+!terraform/**
 !.editorconfig
 !.gitignore
 !.markdownlint.yaml
@@ -35,3 +41,13 @@
 
 # vscode-sops
 .decrypted~*.yaml
+
+# terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.*
+*.tfplan
+*.tfplan.*
+.terraform
+.terraform.lock.hcl
