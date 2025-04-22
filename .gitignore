@@ -3,11 +3,11 @@
 
 # allow files and directories
 !/.github
-!/.taskfiles/**/Taskfile.yaml
-!/assets/*.png
-!/**/*.yaml
-!/**/*.tf
-!/**/README.md
+!/.taskfiles
+!/assets
+!/data
+!/modules
+!/terraform
 !.editorconfig
 !.gitignore
 !.markdownlint.yaml
