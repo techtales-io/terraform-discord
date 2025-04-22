@@ -5,9 +5,9 @@
 !/.github
 !/.taskfiles/**/Taskfile.yaml
 !/assets/*.png
-!**/*.yaml
-!**/*.tf
-!**/README.md
+!/**/*.yaml
+!/**/*.tf
+!/**/README.md
 !.editorconfig
 !.gitignore
 !.markdownlint.yaml
