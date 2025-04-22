@@ -8,7 +8,7 @@ spec:
   displayName: 🔊・VOICE CHANNELS
   channels:
     - stream
-    - afk
     - gaming
     - minecraft
-    - crowlex-lair
+    - zen-zone
+    - afk
