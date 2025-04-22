@@ -82,6 +82,7 @@ task pre-commit:init
 
 | Name                    | Description                           |
 | ----------------------- | ------------------------------------- |
+| `VAULT_ADDR`            | vault url/address                     |
 | `VAULT_TOKEN`           | vault token                           |
 | `AWS_ENDPOINT_URL_S3`   | endpoint url for the s3 state backend |
 | `AWS_REGION`            | region for the s3 state backend       |
