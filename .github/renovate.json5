@@ -1,13 +1,8 @@
 {
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
   enabled: true,
   extends: [
-    "github>tyriis/renovate-config//dashboard/default.json5",
-    "github>tyriis/renovate-config//terraform-infra.json5",
-    "github>tyriis/renovate-config//labels/semantic.json5",
+    "github>techtales-io/renovate-config:base.json5",
+    "github>techtales-io/renovate-config:terraform-infra.json5",
   ],
-  semanticCommits: "enabled",
-  suppressNotifications: ["prIgnoreNotification"],
-  rebaseWhen: "conflicted",
-  customManagers: [],
-  packageRules: [],
 }
