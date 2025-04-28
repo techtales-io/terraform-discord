@@ -3,6 +3,6 @@
   username: "techtales-bot[bot]",
   gitAuthor: "techtales-bot <118013669+techtales-bot[bot]@users.noreply.github.com>",
   platform: "github",
-  platformCommit: true,
+  platformCommit: "enabled",
   repositories: ["techtales-io/terraform-discord"],
 }
