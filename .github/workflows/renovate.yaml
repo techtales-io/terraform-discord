@@ -1,0 +1,56 @@
+---
+name: renovate
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: dry run mode
+        type: choice
+        options:
+          - "null"
+          - extract
+          - lookup
+          - full
+        default: "null"
+        required: false
+      log-level:
+        description: renovate log level
+        type: choice
+        options:
+          - debug
+          - info
+          - warn
+          - error
+          - fatal
+        default: debug
+        required: false
+  schedule:
+    - cron: 0 */6 * * * # every 6 hours
+  push:
+    branches:
+      - main
+    paths:
+      - .github/renovate.json5
+      - .github/renovate-bot.json5
+      - .github/renovate/**.json5
+      - .github/workflows/renovate.yaml
+
+concurrency:
+  group: renovate
+  cancel-in-progress: true
+
+jobs:
+  renovate:
+    uses: techtales-io/github-workflows/.github/workflows/run-renovate.yaml@705dc63c1ce7690720f6c8ab24cec2177ad75db8 # v0.2.1
+    permissions:
+      contents: read
+      pull-requests: write
+    with:
+      runner: ubuntu-latest
+      configuration-file: .github/renovate-bot.json5
+      dry-run: ${{ inputs.dry-run || 'null' }}
+      log-level: ${{ inputs.log-level || 'debug' }}
+    secrets:
+      github-app-id: ${{ secrets.BOT_APP_ID }}
+      github-app-key: ${{ secrets.BOT_APP_PRIVATE_KEY }}

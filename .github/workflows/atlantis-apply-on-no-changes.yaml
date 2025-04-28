@@ -1,7 +1,7 @@
 ---
-# We want to run automerge atlantis managed PRs if no change is detected in the infrastructure
+# we want to run automerge atlantis managed PRs if no change is detected in the infrastructure.
 # this is required because atlantis does not support automerge on no changes.
-# This mostly happens when a PR is created by renovate (f.e. tyriis-automation[bot]).
+# this mostly happens when a PR is created by renovate (f.e. tyriis-automation[bot]).
 name: atlantis apply on no changes
 
 on:
@@ -10,34 +10,16 @@ on:
 
 jobs:
   atlantis-apply-on-no-changes:
+    uses: techtales-io/github-workflows/.github/workflows/atlantis-apply-on-no-changes.yaml@705dc63c1ce7690720f6c8ab24cec2177ad75db8 # v0.2.1
+    permissions:
+      contents: read
+      pull-requests: write
     if: >
       !!github.event.issue.pull_request &&
       github.event.comment.user.login == 'techtales-atlantis[bot]' &&
       contains(github.event.comment.body, 'No changes. Your infrastructure matches the configuration.')
-    name: Atlantis apply on no changes
-    runs-on:
-      - ubuntu-latest
-    steps:
-      # https://github.com/marketplace/actions/github-app-token
-      - name: Generate Token
-        uses: tibdex/github-app-token@3beb63f4bd073e61482598c45c71c1019b59b73a # v2.1.0
-        id: generate-token
-        with:
-          app_id: "${{ secrets.BOT_APP_ID }}"
-          private_key: "${{ secrets.BOT_APP_PRIVATE_KEY }}"
-
-      # https://github.com/marketplace/actions/checkout
-      - name: Checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-        with:
-          token: "${{ steps.generate-token.outputs.token }}"
-          fetch-depth: 0
-
-      # https://github.com/marketplace/actions/install-gh-cli
-      - name: install github cli
-        uses: dev-hanz-ops/install-gh-cli-action@af38ce09b1ec248aeb08eea2b16bbecea9e059f8 # v0.2.1
-
-      - name: Comment on PR
-        run: gh pr comment ${{ github.event.issue.number }} --body "atlantis apply"
-        env:
-          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+    with:
+      runner: ubuntu-latest
+    secrets:
+      github-app-id: ${{ secrets.BOT_APP_ID }}
+      github-app-key: ${{ secrets.BOT_APP_PRIVATE_KEY }}
