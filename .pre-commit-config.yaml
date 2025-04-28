@@ -3,8 +3,8 @@
 fail_fast: false
 
 default_stages:
-  - commit
-  - push
+  - pre-commit
+  - pre-push
 
 exclude: "^assets/"
 
@@ -91,8 +91,8 @@ repos:
           - --config
           - .markdownlint.yaml
 
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v3.1.0
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: v3.5.3
     hooks:
       - id: prettier
         args:
@@ -106,7 +106,7 @@ repos:
     hooks:
       - id: forbid-secrets
 
-  - repo: https://github.com/zricethezav/gitleaks
+  - repo: https://github.com/gitleaks/gitleaks
     rev: v8.24.3
     hooks:
       - id: gitleaks
