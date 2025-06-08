@@ -18,7 +18,7 @@
 
 # Terraform Discord for techtales.io
 
-Discord Server Infrastructure as code with Terraform.
+Discord Server Infrastructure as code with Terraform and Atlantis.
 
 <details>
   <summary style="font-size:1.2em;">Table of Contents</summary>
