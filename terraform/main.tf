@@ -5,7 +5,7 @@ terraform {
     discord = {
       # https://registry.terraform.io/providers/Lucky3028/discord/latest/docs
       source  = "Lucky3028/discord"
-      version = "2.2.1"
+      version = "2.2.2"
     }
     vault = {
       source  = "hashicorp/vault"
