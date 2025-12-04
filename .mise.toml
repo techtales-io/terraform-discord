@@ -3,7 +3,7 @@ experimental = true
 
 [tools]
 terraform = "1.10.5"
-trivy = "0.67.2"
+trivy = "0.68.1"
 terraform-docs = "0.20.0"
 pre-commit = "4.5.0"
 tflint = "0.60.0"
