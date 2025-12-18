@@ -42,7 +42,7 @@ concurrency:
 
 jobs:
   renovate:
-    uses: techtales-io/github-workflows/.github/workflows/run-renovate.yaml@aef12f19cc16a2111ffabc3f328706bb16a5a0d2 # v0.2.4
+    uses: techtales-io/github-workflows/.github/workflows/run-renovate.yaml@2fe6bbfc57cbc37de4d5288dd3ee506b75032f78 # v0.2.5
     permissions:
       contents: read
       pull-requests: write
