@@ -1,6 +1,7 @@
 <!-- markdownlint-disable MD041 -->
 <!-- markdownlint-disable MD033 -->
 <!-- markdownlint-disable MD028 -->
+<!-- markdownlint-disable MD060 -->
 
 # TF DOCS
 
@@ -12,13 +13,13 @@
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.0 |
-| <a name="requirement_discord"></a> [discord](#requirement\_discord) | 2.0.0 |
+| <a name="requirement_discord"></a> [discord](#requirement\_discord) | 2.2.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_discord"></a> [discord](#provider\_discord) | 2.0.0 |
+| <a name="provider_discord"></a> [discord](#provider\_discord) | 2.2.1 |
 
 ## Modules
 
@@ -28,8 +29,8 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [discord_text_channel.main](https://registry.terraform.io/providers/Lucky3028/discord/2.0.0/docs/resources/text_channel) | resource |
-| [discord_voice_channel.main](https://registry.terraform.io/providers/Lucky3028/discord/2.0.0/docs/resources/voice_channel) | resource |
+| [discord_text_channel.main](https://registry.terraform.io/providers/Lucky3028/discord/2.2.1/docs/resources/text_channel) | resource |
+| [discord_voice_channel.main](https://registry.terraform.io/providers/Lucky3028/discord/2.2.1/docs/resources/voice_channel) | resource |
 
 ## Inputs
 
