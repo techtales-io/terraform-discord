@@ -12,14 +12,14 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.0 |
-| <a name="requirement_discord"></a> [discord](#requirement\_discord) | 2.2.1 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.10.0, <= 1.14.3 |
+| <a name="requirement_discord"></a> [discord](#requirement\_discord) | 2.2.2 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_discord"></a> [discord](#provider\_discord) | 2.2.1 |
+| <a name="provider_discord"></a> [discord](#provider\_discord) | 2.2.2 |
 
 ## Modules
 
@@ -29,7 +29,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [discord_webhook.main](https://registry.terraform.io/providers/Lucky3028/discord/2.2.1/docs/resources/webhook) | resource |
+| [discord_webhook.main](https://registry.terraform.io/providers/Lucky3028/discord/2.2.2/docs/resources/webhook) | resource |
 
 ## Inputs
 
