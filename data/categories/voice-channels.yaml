@@ -7,8 +7,8 @@ metadata:
 spec:
   displayName: 🔊・VOICE CHANNELS
   channels:
-    - stream
     - gaming
     - minecraft
+    - stream
     - zen-zone
     - afk
