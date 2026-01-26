@@ -10,7 +10,7 @@ on:
 
 jobs:
   atlantis-apply-on-no-changes:
-    uses: techtales-io/github-workflows/.github/workflows/atlantis-apply-on-no-changes.yaml@9dd23aa5f200750afb5ddc6171cc5987d8333f49 # v0.4.0
+    uses: techtales-io/github-workflows/.github/workflows/atlantis-apply-on-no-changes.yaml@01774392cb1618d8e7f699697422b199bfb30ba8 # v0.4.1
     permissions:
       contents: read
       pull-requests: write
