@@ -10,7 +10,7 @@ exclude: "^assets/"
 
 repos:
   - repo: https://github.com/thlorenz/doctoc
-    rev: v2.2.0
+    rev: v2.3.0
     hooks:
       - id: doctoc
         args:
