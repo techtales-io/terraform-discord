@@ -5,5 +5,5 @@ experimental = true
 terraform = "1.14.9"
 trivy = "0.69.1"
 terraform-docs = "0.22.0"
-pre-commit = "4.5.1"
+pre-commit = "4.6.0"
 tflint = "0.62.0"
