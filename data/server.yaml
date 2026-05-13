@@ -16,3 +16,4 @@ spec:
     - voice-channels
     - home-ops
     - home-automation
+    - agents
