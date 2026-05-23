@@ -62,4 +62,3 @@ spec:
 - **Atlantis** will automatically run `atlantis plan`.
 - If the plan is locked by another PR, go to that PR and comment `atlantis unlock`, then come back to your PR and comment `atlantis plan`.
 - **MegaLinter** runs on all PRs. Ensure your YAML and Markdown are well-formatted (e.g., 2 spaces for YAML).
-- Once checks pass and the plan looks correct, comment `atlantis apply` to deploy.
