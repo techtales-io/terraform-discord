@@ -1,6 +1,8 @@
 # Agent Instructions for terraform-discord
 
-Welcome! This repository manages the Techtales Discord server infrastructure using Terraform, driven by custom YAML manifests. This guide will help AI agents (and human developers) understand the repository structure, conventions, and CI/CD workflow.
+Welcome! This repository manages the Techtales Discord server infrastructure using Terraform, driven by custom YAML manifests.
+
+This guide will help AI agents (and human developers) understand the repository structure, conventions, and CI/CD workflow.
 
 ## Architecture
 
