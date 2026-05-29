@@ -2,8 +2,8 @@
 experimental = true
 
 [tools]
-terraform = "1.15.3"
-trivy = "0.69.1"
-terraform-docs = "0.24.0"
-pre-commit = "4.6.0"
-tflint = "0.62.1"
+"aqua:hashicorp/terraform" = "1.15.3"
+"aqua:aquasecurity/trivy" = "0.70.0"
+"aqua:terraform-docs/terraform-docs" = "0.24.0"
+"aqua:pre-commit/pre-commit" = "4.6.0"
+"aqua:terraform-linters/tflint" = "0.62.1"
