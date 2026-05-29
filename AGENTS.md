@@ -45,6 +45,30 @@ spec:
 - Assign it to a category by adding it to the category's `spec.channels` list in the respective `data/categories/` file.
 - The `metadata.name` MUST match the file's basename (without `.yaml`) to prevent `yaml-loader` duplicate key errors.
 
+#### Private (per-user) Channels
+
+For channels that should only be visible to specific users, add an `owner` field to the spec:
+
+```yaml
+spec:
+  displayName: 🤖・crowlex
+  owner: crowlex
+  syncPermissionsWithCategory: false
+```
+
+This automatically creates 4 `discord_channel_permission` resources per channel:
+
+1. Deny @everyone VIEW_CHANNEL
+2. Allow the owner VIEW_CHANNEL + SEND_MESSAGES + READ_MESSAGE_HISTORY
+3. Allow @admin role the same permissions
+4. Allow the Hermes bot the same permissions
+
+**To add a new private user channel:**
+
+1. Create the channel YAML with `owner` and `syncPermissionsWithCategory: false`.
+2. Add the channel to the category's `spec.channels` list.
+3. Add the user's Discord snowflake ID to the `user_ids` map in `terraform/locals.tf`.
+
 ### 3. Aesthetic Conventions
 
 - Use emojis and interpuncts for display names.
