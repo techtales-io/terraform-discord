@@ -1,8 +1,3 @@
-data "discord_role" "admin" {
-  server_id = module.server["techtales.io"].data.id
-  name      = "admin"
-}
-
 locals {
   # Create a map of categories, each containing a map of channels
   category_channel_map = {
@@ -27,7 +22,7 @@ locals {
 
   # @everyone role ID is always the server/guild ID in Discord
   everyone_role_id = module.server["techtales.io"].data.id
-  admin_role_id    = data.discord_role.admin.id
+  admin_role_id    = "829004846152941648"
 
   # Permission bitmasks used:
   # VIEW_CHANNEL (0x400)        = 1024

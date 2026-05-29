@@ -12,7 +12,7 @@
 
 | Name | Version |
 | ---- | ------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.10.0, <= 1.15.3 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.10.0, <= 1.15.5 |
 | <a name="requirement_discord"></a> [discord](#requirement\_discord) | 2.6.0 |
 | <a name="requirement_vault"></a> [vault](#requirement\_vault) | 5.9.0 |
 
@@ -43,7 +43,6 @@
 | [discord_channel_permission.allow_owner](https://registry.terraform.io/providers/Lucky3028/discord/2.6.0/docs/resources/channel_permission) | resource |
 | [discord_channel_permission.deny_everyone](https://registry.terraform.io/providers/Lucky3028/discord/2.6.0/docs/resources/channel_permission) | resource |
 | [vault_kv_secret_v2.terraform_discord](https://registry.terraform.io/providers/hashicorp/vault/5.9.0/docs/resources/kv_secret_v2) | resource |
-| [discord_role.admin](https://registry.terraform.io/providers/Lucky3028/discord/2.6.0/docs/data-sources/role) | data source |
 | [vault_generic_secret.terraform_discord](https://registry.terraform.io/providers/hashicorp/vault/5.9.0/docs/data-sources/generic_secret) | data source |
 
 ## Inputs
