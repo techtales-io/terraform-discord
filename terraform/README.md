@@ -39,6 +39,7 @@
 | Name | Type |
 | ---- | ---- |
 | [discord_channel_permission.allow_admin](https://registry.terraform.io/providers/Lucky3028/discord/2.6.0/docs/resources/channel_permission) | resource |
+| [discord_channel_permission.allow_euphoria](https://registry.terraform.io/providers/Lucky3028/discord/2.6.0/docs/resources/channel_permission) | resource |
 | [discord_channel_permission.allow_hermes](https://registry.terraform.io/providers/Lucky3028/discord/2.6.0/docs/resources/channel_permission) | resource |
 | [discord_channel_permission.allow_owner](https://registry.terraform.io/providers/Lucky3028/discord/2.6.0/docs/resources/channel_permission) | resource |
 | [discord_channel_permission.deny_everyone](https://registry.terraform.io/providers/Lucky3028/discord/2.6.0/docs/resources/channel_permission) | resource |

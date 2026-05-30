@@ -18,6 +18,7 @@ locals {
     jazzlyn  = "777140685118898176"
     tyriis   = "713481031768080388"
     hermes   = "1504207550097260716"
+    euphoria = "1510342663701004318"
   }
 
   # @everyone role ID is always the server/guild ID in Discord

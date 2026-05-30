@@ -40,3 +40,11 @@ resource "discord_channel_permission" "allow_hermes" {
   deny         = 0
   allow        = tonumber(local.perms_read_write_history)
 }
+
+resource "discord_channel_permission" "allow_euphoria" {
+  channel_id   = module.channel["hermes-tyriis"].data[0].id
+  type         = "user"
+  overwrite_id = local.user_ids["euphoria"]
+  deny         = 0
+  allow        = tonumber(local.perms_read_write_history)
+}
