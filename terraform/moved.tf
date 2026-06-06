@@ -183,3 +183,29 @@ moved {
   from = discord_channel_permission.allow_hermes["hermes-tyriis"]
   to   = discord_channel_permission.allow_hermes["euphoria"]
 }
+
+# hermes-jazzlyn -> moira channel rename
+moved {
+  from = module.channel["hermes-jazzlyn"].discord_text_channel.main[0]
+  to   = module.channel["moira"].discord_text_channel.main[0]
+}
+
+moved {
+  from = discord_channel_permission.deny_everyone["hermes-jazzlyn"]
+  to   = discord_channel_permission.deny_everyone["moira"]
+}
+
+moved {
+  from = discord_channel_permission.allow_owner["hermes-jazzlyn"]
+  to   = discord_channel_permission.allow_owner["moira"]
+}
+
+moved {
+  from = discord_channel_permission.allow_admin["hermes-jazzlyn"]
+  to   = discord_channel_permission.allow_admin["moira"]
+}
+
+moved {
+  from = discord_channel_permission.allow_hermes["hermes-jazzlyn"]
+  to   = discord_channel_permission.allow_hermes["moira"]
+}

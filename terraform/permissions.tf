@@ -48,3 +48,11 @@ resource "discord_channel_permission" "allow_euphoria" {
   deny         = 0
   allow        = tonumber(local.perms_read_write_history)
 }
+
+resource "discord_channel_permission" "allow_moira" {
+  channel_id   = module.channel["moira"].data[0].id
+  type         = "user"
+  overwrite_id = local.user_ids["moira"]
+  deny         = 0
+  allow        = tonumber(local.perms_read_write_history)
+}
