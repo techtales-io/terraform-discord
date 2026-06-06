@@ -157,3 +157,29 @@ moved {
   from = discord_webhook.talos_flux_flux_system
   to   = module.webhook["flux-system"].discord_webhook.main
 }
+
+# hermes-tyriis -> euphoria channel rename
+moved {
+  from = module.channel["hermes-tyriis"].discord_text_channel.main[0]
+  to   = module.channel["euphoria"].discord_text_channel.main[0]
+}
+
+moved {
+  from = discord_channel_permission.deny_everyone["hermes-tyriis"]
+  to   = discord_channel_permission.deny_everyone["euphoria"]
+}
+
+moved {
+  from = discord_channel_permission.allow_owner["hermes-tyriis"]
+  to   = discord_channel_permission.allow_owner["euphoria"]
+}
+
+moved {
+  from = discord_channel_permission.allow_admin["hermes-tyriis"]
+  to   = discord_channel_permission.allow_admin["euphoria"]
+}
+
+moved {
+  from = discord_channel_permission.allow_hermes["hermes-tyriis"]
+  to   = discord_channel_permission.allow_hermes["euphoria"]
+}
