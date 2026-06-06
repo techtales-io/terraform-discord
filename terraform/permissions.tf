@@ -42,7 +42,7 @@ resource "discord_channel_permission" "allow_hermes" {
 }
 
 resource "discord_channel_permission" "allow_euphoria" {
-  channel_id   = module.channel["hermes-tyriis"].data[0].id
+  channel_id   = module.channel["euphoria"].data[0].id
   type         = "user"
   overwrite_id = local.user_ids["euphoria"]
   deny         = 0
