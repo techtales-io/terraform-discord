@@ -8,7 +8,7 @@ spec:
   displayName: 🧑‍💻・AGENTS
   channels:
     - hermes
-    - hermes-crowlex
-    - hermes-techninik
+    - titan-ai
+    - nova
     - moira
     - euphoria
