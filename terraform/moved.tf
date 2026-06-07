@@ -209,3 +209,29 @@ moved {
   from = discord_channel_permission.allow_hermes["hermes-jazzlyn"]
   to   = discord_channel_permission.allow_hermes["moira"]
 }
+
+# hermes-crowlex -> titan-ai channel rename
+moved {
+  from = module.channel["hermes-crowlex"].discord_text_channel.main[0]
+  to   = module.channel["titan-ai"].discord_text_channel.main[0]
+}
+
+moved {
+  from = discord_channel_permission.deny_everyone["hermes-crowlex"]
+  to   = discord_channel_permission.deny_everyone["titan-ai"]
+}
+
+moved {
+  from = discord_channel_permission.allow_owner["hermes-crowlex"]
+  to   = discord_channel_permission.allow_owner["titan-ai"]
+}
+
+moved {
+  from = discord_channel_permission.allow_admin["hermes-crowlex"]
+  to   = discord_channel_permission.allow_admin["titan-ai"]
+}
+
+moved {
+  from = discord_channel_permission.allow_hermes["hermes-crowlex"]
+  to   = discord_channel_permission.allow_hermes["titan-ai"]
+}
