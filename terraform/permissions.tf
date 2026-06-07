@@ -56,3 +56,11 @@ resource "discord_channel_permission" "allow_moira" {
   deny         = 0
   allow        = tonumber(local.perms_read_write_history)
 }
+
+resource "discord_channel_permission" "allow_titan_ai" {
+  channel_id   = module.channel["titan-ai"].data[0].id
+  type         = "user"
+  overwrite_id = local.user_ids["titan-ai"]
+  deny         = 0
+  allow        = tonumber(local.perms_read_write_history)
+}

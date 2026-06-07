@@ -43,6 +43,7 @@
 | [discord_channel_permission.allow_hermes](https://registry.terraform.io/providers/Lucky3028/discord/2.7.0/docs/resources/channel_permission) | resource |
 | [discord_channel_permission.allow_moira](https://registry.terraform.io/providers/Lucky3028/discord/2.7.0/docs/resources/channel_permission) | resource |
 | [discord_channel_permission.allow_owner](https://registry.terraform.io/providers/Lucky3028/discord/2.7.0/docs/resources/channel_permission) | resource |
+| [discord_channel_permission.allow_titan_ai](https://registry.terraform.io/providers/Lucky3028/discord/2.7.0/docs/resources/channel_permission) | resource |
 | [discord_channel_permission.deny_everyone](https://registry.terraform.io/providers/Lucky3028/discord/2.7.0/docs/resources/channel_permission) | resource |
 | [vault_kv_secret_v2.terraform_discord](https://registry.terraform.io/providers/hashicorp/vault/5.9.0/docs/resources/kv_secret_v2) | resource |
 | [vault_generic_secret.terraform_discord](https://registry.terraform.io/providers/hashicorp/vault/5.9.0/docs/data-sources/generic_secret) | data source |
