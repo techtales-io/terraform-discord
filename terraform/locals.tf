@@ -21,6 +21,7 @@ locals {
     euphoria = "1510342663701004318"
     moira    = "1512927492577689620"
     titan-ai = "1513107170533703730"
+    nova     = "1513218263885287584"
   }
 
   # @everyone role ID is always the server/guild ID in Discord

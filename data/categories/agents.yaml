@@ -9,6 +9,6 @@ spec:
   channels:
     - hermes
     - titan-ai
-    - hermes-techninik
+    - nova
     - moira
     - euphoria

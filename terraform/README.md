@@ -42,6 +42,7 @@
 | [discord_channel_permission.allow_euphoria](https://registry.terraform.io/providers/Lucky3028/discord/2.7.0/docs/resources/channel_permission) | resource |
 | [discord_channel_permission.allow_hermes](https://registry.terraform.io/providers/Lucky3028/discord/2.7.0/docs/resources/channel_permission) | resource |
 | [discord_channel_permission.allow_moira](https://registry.terraform.io/providers/Lucky3028/discord/2.7.0/docs/resources/channel_permission) | resource |
+| [discord_channel_permission.allow_nova](https://registry.terraform.io/providers/Lucky3028/discord/2.7.0/docs/resources/channel_permission) | resource |
 | [discord_channel_permission.allow_owner](https://registry.terraform.io/providers/Lucky3028/discord/2.7.0/docs/resources/channel_permission) | resource |
 | [discord_channel_permission.allow_titan_ai](https://registry.terraform.io/providers/Lucky3028/discord/2.7.0/docs/resources/channel_permission) | resource |
 | [discord_channel_permission.deny_everyone](https://registry.terraform.io/providers/Lucky3028/discord/2.7.0/docs/resources/channel_permission) | resource |

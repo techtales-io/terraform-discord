@@ -235,3 +235,29 @@ moved {
   from = discord_channel_permission.allow_hermes["hermes-crowlex"]
   to   = discord_channel_permission.allow_hermes["titan-ai"]
 }
+
+# hermes-techninik -> nova channel rename
+moved {
+  from = module.channel["hermes-techninik"].discord_text_channel.main[0]
+  to   = module.channel["nova"].discord_text_channel.main[0]
+}
+
+moved {
+  from = discord_channel_permission.deny_everyone["hermes-techninik"]
+  to   = discord_channel_permission.deny_everyone["nova"]
+}
+
+moved {
+  from = discord_channel_permission.allow_owner["hermes-techninik"]
+  to   = discord_channel_permission.allow_owner["nova"]
+}
+
+moved {
+  from = discord_channel_permission.allow_admin["hermes-techninik"]
+  to   = discord_channel_permission.allow_admin["nova"]
+}
+
+moved {
+  from = discord_channel_permission.allow_hermes["hermes-techninik"]
+  to   = discord_channel_permission.allow_hermes["nova"]
+}
