@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= 1.10.0, <= 1.15.5"
+  required_version = ">= 1.10.0, <= 1.15.6"
 
   required_providers {
     discord = {
