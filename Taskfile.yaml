@@ -1,4 +1,5 @@
 ---
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
 version: "3"
 
 vars:
@@ -7,5 +8,10 @@ vars:
   TERRAFORM_DIR: "{{.PROJECT_DIR}}"
 
 includes:
-  pre-commit: .taskfiles/pre-commit/Taskfile.yaml
-  lint: .taskfiles/lint/Taskfile.yaml
+  pre-commit: .taskfiles/pre-commit
+
+tasks:
+  lint:
+    desc: lint codebase
+    cmds:
+      - task: pre-commit:run
