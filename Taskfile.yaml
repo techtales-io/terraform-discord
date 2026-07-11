@@ -14,4 +14,6 @@ tasks:
   lint:
     desc: lint codebase
     cmds:
+      - task: pre-commit:init
+      - task: pre-commit:init
       - task: pre-commit:run
