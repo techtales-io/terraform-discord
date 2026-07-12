@@ -1,7 +1,6 @@
 ---
 # yaml-language-server: $schema=https://json.schemastore.org/pre-commit-config.json
 fail_fast: false
-
 default_stages:
   - pre-commit
   - pre-push
@@ -9,6 +8,11 @@ default_stages:
 exclude: "^assets/"
 
 repos:
+  # checks pre-commit config for errors
+  - repo: meta
+    hooks:
+      - id: check-useless-excludes
+
   - repo: https://github.com/thlorenz/doctoc
     rev: v2.5.0
     hooks:
@@ -38,15 +42,16 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
-      - id: check-merge-conflict
+      # general
       - id: check-added-large-files
-        args:
-          - --maxkb=100
       - id: check-case-conflict
       - id: check-executables-have-shebangs
-      - id: check-json
+      - id: check-illegal-windows-names
+      - id: check-merge-conflict
+      - id: check-shebang-scripts-are-executable
       - id: check-symlinks
-      - id: check-xml
+      - id: check-vcs-permalinks
+      - id: destroyed-symlinks
       - id: detect-aws-credentials
         args:
           - --allow-missing-credentials
@@ -54,13 +59,15 @@ repos:
       - id: end-of-file-fixer
       - id: fix-byte-order-marker
       - id: mixed-line-ending
-        args:
-          - --fix=auto
-      - id: trailing-whitespace
-        args:
-          - --markdown-linebreak-ext=md
       - id: no-commit-to-branch
-        args: ["--branch", "main"]
+      - id: trailing-whitespace
+      # format-specific
+      - id: check-json
+      - id: check-toml
+      - id: check-xml
+      - id: check-yaml
+        args:
+          - --allow-multiple-documents
 
   - repo: https://github.com/adrienverge/yamllint
     rev: v1.38.0

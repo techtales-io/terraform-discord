@@ -1,8 +1,10 @@
 ---
 # see https://yamllint.readthedocs.io/en/stable/index.html for more options
-ignore: |
-  gotk-components.yaml
 extends: default
+
+ignore: |
+  **/*.sops.yaml
+
 rules:
   truthy:
     allowed-values: ["true", "false", "on"]
