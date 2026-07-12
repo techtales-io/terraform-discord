@@ -19,11 +19,11 @@ Determine the following from the user:
 ## 2. Implementation
 
 1. **Create the Category YAML (if needed)** in `data/categories/<category-name>.yaml`.
-   - Ensure `metadata.name` exactly matches `<category-name>` (the file basename).
-   - Add the new category to `spec.categories` list in `data/server.yaml`.
+  - Ensure `metadata.name` exactly matches `<category-name>` (the file basename).
+  - Add the new category to `spec.categories` list in `data/server.yaml`.
 2. **Create the Channel YAML** in `data/channels/<channel-name>.yaml`.
-   - Ensure `metadata.name` exactly matches `<channel-name>` (the file basename).
-   - Add the channel to the `spec.channels` list in the corresponding category YAML.
+  - Ensure `metadata.name` exactly matches `<channel-name>` (the file basename).
+  - Add the channel to the `spec.channels` list in the corresponding category YAML.
 3. **Validate**: Check that your file basenames and `metadata.name` fields match perfectly to prevent `duplicate object key` errors in the `yaml-loader`.
 
 ## 3. PR Creation & CI/CD
@@ -32,16 +32,16 @@ Determine the following from the user:
 2. Commit the changes and push to origin.
 3. Create a Pull Request using `gh pr create`.
 4. Monitor the PR checks (`gh pr checks` or `gh pr view --comments`).
-   - If `atlantis/plan` fails due to a lock from a previous PR, find the blocking PR, comment `atlantis unlock` on it, and then comment `atlantis plan` on the new PR.
-   - Wait until `MegaLinter`, `atlantis/plan`, and all other hooks succeed.
+  - If `atlantis/plan` fails due to a lock from a previous PR, find the blocking PR, comment `atlantis unlock` on it, and then comment `atlantis plan` on the new PR.
+  - Wait until `MegaLinter`, `atlantis/plan`, and all other hooks succeed.
 
 ## 4. MANDATORY APPROVAL GATE
 
-**<HARD-GATE>**
+**<HARD-GATE>** <!-- markdownlint-disable-line MD033 -->
 You MUST explicitly ask the user for permission before applying the infrastructure changes.
 Ask the user: _"All pipelines have passed. Do I have your permission to comment `atlantis apply` to deploy these changes?"_
 **Do NOT proceed to step 5 until the user explicitly approves.**
-**</HARD-GATE>**
+**</HARD-GATE>** <!-- markdownlint-disable-line MD033 -->
 
 ## 5. Deployment and Reporting
 
