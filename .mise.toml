@@ -4,6 +4,6 @@
 "aqua:getsops/sops" = "3.13.2"
 "aqua:go-task/task" = "3.52.0"
 "aqua:hashicorp/terraform" = "1.15.8"
-"aqua:pre-commit/pre-commit" = "4.6.0"
+"aqua:pre-commit/pre-commit" = "4.6.1"
 "aqua:terraform-docs/terraform-docs" = "0.24.0"
 "aqua:terraform-linters/tflint" = "0.64.0"
