@@ -6,4 +6,4 @@
 "aqua:hashicorp/terraform" = "1.17.0"
 "aqua:pre-commit/pre-commit" = "4.7.0"
 "aqua:terraform-docs/terraform-docs" = "0.24.0"
-"aqua:terraform-linters/tflint" = "0.64.0"
+"aqua:terraform-linters/tflint" = "0.65.0"
