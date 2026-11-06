@@ -3,7 +3,7 @@
 "aqua:direnv/direnv" = "2.38.2"
 "aqua:getsops/sops" = "3.13.3"
 "aqua:go-task/task" = "3.54.0"
-"aqua:hashicorp/terraform" = "1.17.0"
+"aqua:hashicorp/terraform" = "1.17.1"
 "aqua:pre-commit/pre-commit" = "4.7.0"
 "aqua:terraform-docs/terraform-docs" = "0.24.0"
 "aqua:terraform-linters/tflint" = "0.65.0"
